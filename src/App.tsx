@@ -378,24 +378,24 @@ export default function App() {
                   {/* 5-Metrics mini bar */}
                   <div className="grid grid-cols-5 gap-1.5 mt-3 pt-3 border-t border-slate-100 text-[11px]">
                     <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
-                      <div className="text-slate-500 text-[10px]">Sci</div>
-                      <div className="font-bold text-sky-400 font-mono">{p.science}</div>
+                      <div className="text-slate-700 text-[10px] font-semibold">Sci</div>
+                      <div className="font-bold text-sky-700 font-mono font-bold">{p.science}</div>
                     </div>
                     <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
-                      <div className="text-slate-500 text-[10px]">Tech</div>
-                      <div className="font-bold text-teal-400 font-mono">{p.technology}</div>
+                      <div className="text-slate-700 text-[10px] font-semibold">Tech</div>
+                      <div className="font-bold text-teal-700 font-mono font-bold">{p.technology}</div>
                     </div>
                     <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
-                      <div className="text-slate-500 text-[10px]">Eng</div>
-                      <div className="font-bold text-amber-600 font-mono">{p.engineering}</div>
+                      <div className="text-slate-700 text-[10px] font-semibold">Eng</div>
+                      <div className="font-bold text-amber-800 font-mono font-bold">{p.engineering}</div>
                     </div>
                     <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
-                      <div className="text-slate-500 text-[10px]">Art</div>
-                      <div className="font-bold text-rose-400 font-mono">{p.art}</div>
+                      <div className="text-slate-700 text-[10px] font-semibold">Art</div>
+                      <div className="font-bold text-rose-700 font-mono font-bold">{p.art}</div>
                     </div>
                     <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
-                      <div className="text-slate-500 text-[10px]">Math</div>
-                      <div className="font-bold text-indigo-400 font-mono">{p.math}</div>
+                      <div className="text-slate-700 text-[10px] font-semibold">Math</div>
+                      <div className="font-bold text-indigo-700 font-mono font-bold">{p.math}</div>
                     </div>
                   </div>
 
@@ -512,19 +512,19 @@ export default function App() {
                 })}
 
                 {/* Axis Labels */}
-                <text x="150" y="24" textAnchor="middle" fill="#38bdf8" fontSize="11" fontWeight="bold">
+                <text x="150" y="24" textAnchor="middle" fill="#0284c7" fontSize="11" fontWeight="800">
                   SCIENCE ({currentProject.science})
                 </text>
-                <text x="272" y="115" textAnchor="start" fill="#2dd4bf" fontSize="11" fontWeight="bold">
+                <text x="272" y="115" textAnchor="start" fill="#0f766e" fontSize="11" fontWeight="800">
                   TECH ({currentProject.technology})
                 </text>
-                <text x="235" y="260" textAnchor="middle" fill="#fbbf24" fontSize="11" fontWeight="bold">
+                <text x="235" y="260" textAnchor="middle" fill="#b45309" fontSize="11" fontWeight="800">
                   ENG ({currentProject.engineering})
                 </text>
-                <text x="65" y="260" textAnchor="middle" fill="#fb7185" fontSize="11" fontWeight="bold">
+                <text x="65" y="260" textAnchor="middle" fill="#be123c" fontSize="11" fontWeight="800">
                   ART ({currentProject.art})
                 </text>
-                <text x="28" y="115" textAnchor="end" fill="#818cf8" fontSize="11" fontWeight="bold">
+                <text x="28" y="115" textAnchor="end" fill="#4338ca" fontSize="11" fontWeight="800">
                   MATH ({currentProject.math})
                 </text>
               </svg>
@@ -533,11 +533,11 @@ export default function App() {
             {/* Radar Legend Breakdown */}
             <div className="w-full grid grid-cols-2 gap-2 text-xs text-slate-700 mt-2">
               <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
-                <Atom className="w-3.5 h-3.5 text-sky-400" />
+                <Atom className="w-3.5 h-3.5 text-sky-700" />
                 <span>Science: <strong>{currentProject.science}%</strong></span>
               </div>
               <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
-                <Cpu className="w-3.5 h-3.5 text-teal-400" />
+                <Cpu className="w-3.5 h-3.5 text-teal-700" />
                 <span>Technology: <strong>{currentProject.technology}%</strong></span>
               </div>
               <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
@@ -545,11 +545,11 @@ export default function App() {
                 <span>Engineering: <strong>{currentProject.engineering}%</strong></span>
               </div>
               <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
-                <Palette className="w-3.5 h-3.5 text-rose-400" />
+                <Palette className="w-3.5 h-3.5 text-rose-700" />
                 <span>Art & UX: <strong>{currentProject.art}%</strong></span>
               </div>
               <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200 col-span-2">
-                <Binary className="w-3.5 h-3.5 text-indigo-400" />
+                <Binary className="w-3.5 h-3.5 text-indigo-700" />
                 <span>Mathematics: <strong>{currentProject.math}%</strong> (Rigor & Formulasi)</span>
               </div>
             </div>
@@ -571,8 +571,8 @@ export default function App() {
               {/* Science Slider */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-slate-400">1. Ketajaman Ilmiah (Science):</span>
-                  <span className="font-bold text-sky-400 font-mono">{userScience}/100</span>
+                  <span className="text-slate-700 font-medium">1. Ketajaman Ilmiah (Science):</span>
+                  <span className="font-bold text-sky-700 font-mono font-bold">{userScience}/100</span>
                 </div>
                 <input
                   type="range"
@@ -587,8 +587,8 @@ export default function App() {
               {/* Technology Slider */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-slate-400">2. Inovasi Perangkat Lunak (Tech):</span>
-                  <span className="font-bold text-teal-400 font-mono">{userTech}/100</span>
+                  <span className="text-slate-700 font-medium">2. Inovasi Perangkat Lunak (Tech):</span>
+                  <span className="font-bold text-teal-700 font-mono font-bold">{userTech}/100</span>
                 </div>
                 <input
                   type="range"
@@ -603,8 +603,8 @@ export default function App() {
               {/* Engineering Slider */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-slate-400">3. Keandalan Rekayasa (Eng):</span>
-                  <span className="font-bold text-amber-600 font-mono">{userEng}/100</span>
+                  <span className="text-slate-700 font-medium">3. Keandalan Rekayasa (Eng):</span>
+                  <span className="font-bold text-amber-800 font-mono font-bold">{userEng}/100</span>
                 </div>
                 <input
                   type="range"
@@ -619,8 +619,8 @@ export default function App() {
               {/* Art Slider */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-slate-400">4. Desain & Ergonomi UX (Art):</span>
-                  <span className="font-bold text-rose-400 font-mono">{userArt}/100</span>
+                  <span className="text-slate-700 font-medium">4. Desain & Ergonomi UX (Art):</span>
+                  <span className="font-bold text-rose-700 font-mono font-bold">{userArt}/100</span>
                 </div>
                 <input
                   type="range"
@@ -635,8 +635,8 @@ export default function App() {
               {/* Math Slider */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-slate-400">5. Kerapian Matematis (Math):</span>
-                  <span className="font-bold text-indigo-400 font-mono">{userMath}/100</span>
+                  <span className="text-slate-700 font-medium">5. Kerapian Matematis (Math):</span>
+                  <span className="font-bold text-indigo-700 font-mono font-bold">{userMath}/100</span>
                 </div>
                 <input
                   type="range"
