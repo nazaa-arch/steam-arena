@@ -239,9 +239,9 @@ export default function App() {
   )
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-500 selection:text-white">
+    <div className="min-h-screen bg-[#f3f6fb] text-[#111d2d] flex flex-col font-sans selection:bg-amber-600 selection:text-white">
       {/* Top Navigation */}
-      <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <header className="border-b border-slate-200/80 bg-white/90 backdrop-blur sticky top-0 z-50 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-gradient-to-tr from-amber-500 to-orange-400 rounded-xl shadow-lg shadow-amber-500/20">
@@ -249,15 +249,15 @@ export default function App() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-black text-lg tracking-tight bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-200 bg-clip-text text-transparent">
+                <span className="font-black text-lg tracking-tight bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
                   SteamArena
                 </span>
-                <span className="px-2 py-0.5 text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-full flex items-center gap-1">
-                  <Flame className="w-3 h-3 text-amber-400 fill-amber-400" />
+                <span className="px-2 py-0.5 text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200 font-semibold rounded-full flex items-center gap-1">
+                  <Flame className="w-3 h-3 text-amber-600 fill-amber-400" />
                   Season 2026 Live
                 </span>
               </div>
-              <p className="text-xs text-slate-400">Competitive STEAM Innovation & Peer-Review Arena</p>
+              <p className="text-xs text-slate-500">Competitive STEAM Innovation & Peer-Review Arena</p>
             </div>
           </div>
 
@@ -266,12 +266,12 @@ export default function App() {
               href="https://steamcraft.online"
               target="_blank"
               rel="noreferrer"
-              className="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-800 border border-slate-800"
+              className="text-xs text-slate-500 hover:text-slate-200 flex items-center gap-1 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-800 border border-slate-800"
             >
               <span>Ecosystem Hub</span>
               <ExternalLink className="w-3 h-3" />
             </a>
-            <div className="hidden sm:flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300">
+            <div className="hidden sm:flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 font-semibold">
               <Zap className="w-3.5 h-3.5" />
               <span>1,217 Total Evaluasi Dinilai</span>
             </div>
@@ -280,14 +280,14 @@ export default function App() {
       </header>
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-b from-slate-900/60 to-slate-950 border-b border-slate-800/80 py-5 px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate-100/60 border-b border-slate-200 py-5 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-black text-slate-100 flex items-center gap-2">
+            <h1 className="text-2xl font-black text-slate-900 flex items-center gap-2">
               <span>National STEAM Innovation Hackathon</span>
-              <Sparkles className="w-5 h-5 text-amber-400" />
+              <Sparkles className="w-5 h-5 text-amber-600" />
             </h1>
-            <p className="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">
+            <p className="text-xs text-slate-500 mt-1 max-w-2xl leading-relaxed">
               Arena evaluasi berbasis rubrik 5 dimensi interaktif: <strong>Science</strong>, <strong>Technology</strong>, <strong>Engineering</strong>, <strong>Art & Design</strong>, dan <strong>Mathematics</strong> dengan algoritma pembobotan peer-review terverifikasi.
             </p>
           </div>
@@ -301,8 +301,8 @@ export default function App() {
                 onClick={() => setFilterTrack(track)}
                 className={`px-3 py-1.5 text-xs rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer ${
                   filterTrack === track
-                    ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200'
+                    ? 'bg-amber-600 text-white font-bold shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 shadow-xs'
                 }`}
               >
                 {track}
@@ -317,8 +317,8 @@ export default function App() {
         {/* Left Column: Leaderboard & Project Cards */}
         <section className="lg:col-span-7 flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
-              <Trophy className="w-4 h-4 text-amber-400" />
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-800 flex items-center gap-2">
+              <Trophy className="w-4 h-4 text-amber-600" />
               <span>Leaderboard Proyek Unggulan ({filteredProjects.length})</span>
             </h2>
             <span className="text-xs text-slate-500">Urut berdasarkan Skor Komposit STEAM</span>
@@ -333,8 +333,8 @@ export default function App() {
                   onClick={() => setSelectedProjectId(p.id)}
                   className={`p-4 rounded-2xl border transition-all cursor-pointer relative overflow-hidden ${
                     isSelected
-                      ? 'bg-slate-900/90 border-amber-500/60 shadow-lg shadow-amber-500/10 ring-1 ring-amber-500/40'
-                      : 'bg-slate-900/40 border-slate-800 hover:border-slate-700 hover:bg-slate-900/60'
+                      ? 'bg-white border-amber-500 shadow-md ring-2 ring-amber-500/20'
+                      : 'bg-white border-slate-200/80 hover:border-slate-300 hover:shadow-xs shadow-xs'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-3">
@@ -355,12 +355,12 @@ export default function App() {
 
                       <div>
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="font-bold text-slate-100 text-sm">{p.title}</h3>
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-amber-400 border border-slate-700">
+                          <h3 className="font-bold text-slate-900 text-sm font-bold">{p.title}</h3>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200 font-semibold">
                             {p.badge}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400 mt-0.5">
+                        <p className="text-xs text-slate-500 mt-0.5">
                           {p.lead} • <span className="text-slate-500">{p.institution}</span>
                         </p>
                       </div>
@@ -368,39 +368,39 @@ export default function App() {
 
                     {/* Composite STEAM Score */}
                     <div className="text-right shrink-0">
-                      <div className="text-xl font-black text-amber-400">{p.steamScore}</div>
+                      <div className="text-xl font-black text-amber-600">{p.steamScore}</div>
                       <div className="text-[10px] uppercase font-semibold text-slate-500">STEAM Score</div>
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-300 mt-2 line-clamp-2 leading-relaxed">{p.description}</p>
+                  <p className="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">{p.description}</p>
 
                   {/* 5-Metrics mini bar */}
-                  <div className="grid grid-cols-5 gap-1.5 mt-3 pt-3 border-t border-slate-800/80 text-[11px]">
-                    <div className="text-center bg-slate-950/60 p-1 rounded-lg border border-slate-800">
+                  <div className="grid grid-cols-5 gap-1.5 mt-3 pt-3 border-t border-slate-100 text-[11px]">
+                    <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
                       <div className="text-slate-500 text-[10px]">Sci</div>
                       <div className="font-bold text-sky-400 font-mono">{p.science}</div>
                     </div>
-                    <div className="text-center bg-slate-950/60 p-1 rounded-lg border border-slate-800">
+                    <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
                       <div className="text-slate-500 text-[10px]">Tech</div>
                       <div className="font-bold text-teal-400 font-mono">{p.technology}</div>
                     </div>
-                    <div className="text-center bg-slate-950/60 p-1 rounded-lg border border-slate-800">
+                    <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
                       <div className="text-slate-500 text-[10px]">Eng</div>
-                      <div className="font-bold text-amber-400 font-mono">{p.engineering}</div>
+                      <div className="font-bold text-amber-600 font-mono">{p.engineering}</div>
                     </div>
-                    <div className="text-center bg-slate-950/60 p-1 rounded-lg border border-slate-800">
+                    <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
                       <div className="text-slate-500 text-[10px]">Art</div>
                       <div className="font-bold text-rose-400 font-mono">{p.art}</div>
                     </div>
-                    <div className="text-center bg-slate-950/60 p-1 rounded-lg border border-slate-800">
+                    <div className="text-center bg-slate-50 p-1 rounded-lg border border-slate-200">
                       <div className="text-slate-500 text-[10px]">Math</div>
                       <div className="font-bold text-indigo-400 font-mono">{p.math}</div>
                     </div>
                   </div>
 
                   {/* Vote and review counts */}
-                  <div className="flex items-center justify-between mt-3 text-xs text-slate-400">
+                  <div className="flex items-center justify-between mt-3 text-xs text-slate-500">
                     <div className="flex items-center gap-3">
                       <button
                         onClick={(e) => {
@@ -410,7 +410,7 @@ export default function App() {
                         className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
                           hasVoted[p.id]
                             ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold'
-                            : 'bg-slate-800 hover:bg-slate-700 text-slate-300'
+                            : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                         }`}
                       >
                         <ThumbsUp className="w-3.5 h-3.5" />
@@ -423,7 +423,7 @@ export default function App() {
                       </div>
                     </div>
 
-                    <span className="text-[11px] text-amber-400/80 flex items-center gap-0.5">
+                    <span className="text-[11px] text-amber-600/80 flex items-center gap-0.5">
                       <span>Buka Radar Metrik</span>
                       <ChevronRight className="w-3 h-3" />
                     </span>
@@ -437,17 +437,17 @@ export default function App() {
         {/* Right Column: Dynamic STEAM Radar Chart & Peer Review Panel */}
         <section className="lg:col-span-5 flex flex-col gap-5">
           {/* Radar Chart Display */}
-          <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center shadow-xl">
-            <div className="w-full flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/80 flex flex-col items-center shadow-xs">
+            <div className="w-full flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
               <div>
-                <h3 className="text-sm font-bold text-slate-100 flex items-center gap-1.5">
-                  <BarChart2 className="w-4 h-4 text-amber-400" />
+                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <BarChart2 className="w-4 h-4 text-amber-600" />
                   <span>STEAM 5-Axis Radar Matrix</span>
                 </h3>
-                <p className="text-xs text-slate-400">{currentProject.title}</p>
+                <p className="text-xs text-slate-500">{currentProject.title}</p>
               </div>
               <div className="text-right">
-                <span className="text-2xl font-black text-amber-400">{currentSteamAvg}</span>
+                <span className="text-2xl font-black text-amber-600">{currentSteamAvg}</span>
                 <span className="text-xs text-slate-500">/100</span>
               </div>
             </div>
@@ -471,7 +471,7 @@ export default function App() {
                       key={sIdx}
                       points={pts}
                       fill="none"
-                      stroke="#334155"
+                      stroke="#e2e8f0"
                       strokeWidth="0.8"
                       strokeDasharray={scale === 1.0 ? 'none' : '2,2'}
                     />
@@ -483,14 +483,14 @@ export default function App() {
                   const rad = (deg * Math.PI) / 180
                   const x = 150 + 110 * Math.cos(rad)
                   const y = 150 + 110 * Math.sin(rad)
-                  return <line key={aIdx} x1="150" y1="150" x2={x} y2={y} stroke="#334155" strokeWidth="0.8" />
+                  return <line key={aIdx} x1="150" y1="150" x2={x} y2={y} stroke="#e2e8f0" strokeWidth="0.8" />
                 })}
 
                 {/* Filled Radar Polygon of Selected Project */}
                 <polygon
                   points={radarPoints}
-                  fill="rgba(245, 158, 11, 0.3)"
-                  stroke="#f59e0b"
+                  fill="rgba(245, 158, 11, 0.18)"
+                  stroke="#ea580c"
                   strokeWidth="2.5"
                   className="transition-all duration-300"
                 />
@@ -508,7 +508,7 @@ export default function App() {
                   const r = metrics[i] * 110
                   const cx = 150 + r * Math.cos(rad)
                   const cy = 150 + r * Math.sin(rad)
-                  return <circle key={i} cx={cx} cy={cy} r="4" fill="#fbbf24" stroke="#0f172a" strokeWidth="1.5" />
+                  return <circle key={i} cx={cx} cy={cy} r="4" fill="#ea580c" stroke="#ffffff" strokeWidth="1.5" />
                 })}
 
                 {/* Axis Labels */}
@@ -531,24 +531,24 @@ export default function App() {
             </div>
 
             {/* Radar Legend Breakdown */}
-            <div className="w-full grid grid-cols-2 gap-2 text-xs text-slate-300 mt-2">
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-950 border border-slate-800">
+            <div className="w-full grid grid-cols-2 gap-2 text-xs text-slate-700 mt-2">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
                 <Atom className="w-3.5 h-3.5 text-sky-400" />
                 <span>Science: <strong>{currentProject.science}%</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-950 border border-slate-800">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
                 <Cpu className="w-3.5 h-3.5 text-teal-400" />
                 <span>Technology: <strong>{currentProject.technology}%</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-950 border border-slate-800">
-                <Wrench className="w-3.5 h-3.5 text-amber-400" />
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
+                <Wrench className="w-3.5 h-3.5 text-amber-600" />
                 <span>Engineering: <strong>{currentProject.engineering}%</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-950 border border-slate-800">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200">
                 <Palette className="w-3.5 h-3.5 text-rose-400" />
                 <span>Art & UX: <strong>{currentProject.art}%</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-950 border border-slate-800 col-span-2">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-slate-50 border border-slate-200 col-span-2">
                 <Binary className="w-3.5 h-3.5 text-indigo-400" />
                 <span>Mathematics: <strong>{currentProject.math}%</strong> (Rigor & Formulasi)</span>
               </div>
@@ -556,13 +556,13 @@ export default function App() {
           </div>
 
           {/* Gamified Peer Review Submission */}
-          <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
               <div className="flex items-center gap-2">
-                <Sliders className="w-4 h-4 text-amber-400" />
-                <h3 className="text-sm font-bold text-slate-100">Beri Nilai Peer-Review</h3>
+                <Sliders className="w-4 h-4 text-amber-600" />
+                <h3 className="text-sm font-bold text-slate-900">Beri Nilai Peer-Review</h3>
               </div>
-              <span className="text-[11px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+              <span className="text-[11px] text-amber-600 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
                 Rubrik Juri Resmi
               </span>
             </div>
@@ -580,7 +580,7 @@ export default function App() {
                   max="100"
                   value={userScience}
                   onChange={(e) => setUserScience(Number(e.target.value))}
-                  className="w-full accent-sky-400 bg-slate-950 cursor-pointer"
+                  className="w-full accent-sky-400 bg-slate-200 cursor-pointer"
                 />
               </div>
 
@@ -596,7 +596,7 @@ export default function App() {
                   max="100"
                   value={userTech}
                   onChange={(e) => setUserTech(Number(e.target.value))}
-                  className="w-full accent-teal-400 bg-slate-950 cursor-pointer"
+                  className="w-full accent-teal-400 bg-slate-200 cursor-pointer"
                 />
               </div>
 
@@ -604,7 +604,7 @@ export default function App() {
               <div>
                 <div className="flex justify-between text-xs mb-1">
                   <span className="text-slate-400">3. Keandalan Rekayasa (Eng):</span>
-                  <span className="font-bold text-amber-400 font-mono">{userEng}/100</span>
+                  <span className="font-bold text-amber-600 font-mono">{userEng}/100</span>
                 </div>
                 <input
                   type="range"
@@ -612,7 +612,7 @@ export default function App() {
                   max="100"
                   value={userEng}
                   onChange={(e) => setUserEng(Number(e.target.value))}
-                  className="w-full accent-amber-400 bg-slate-950 cursor-pointer"
+                  className="w-full accent-amber-400 bg-slate-200 cursor-pointer"
                 />
               </div>
 
@@ -628,7 +628,7 @@ export default function App() {
                   max="100"
                   value={userArt}
                   onChange={(e) => setUserArt(Number(e.target.value))}
-                  className="w-full accent-rose-400 bg-slate-950 cursor-pointer"
+                  className="w-full accent-rose-400 bg-slate-200 cursor-pointer"
                 />
               </div>
 
@@ -644,25 +644,25 @@ export default function App() {
                   max="100"
                   value={userMath}
                   onChange={(e) => setUserMath(Number(e.target.value))}
-                  className="w-full accent-indigo-400 bg-slate-950 cursor-pointer"
+                  className="w-full accent-indigo-400 bg-slate-200 cursor-pointer"
                 />
               </div>
 
               {/* Catatan Reviewer */}
               <div>
-                <label className="text-xs text-slate-400 block mb-1">Ulasan Evaluator (Opsional):</label>
+                <label className="text-xs text-slate-500 block mb-1">Ulasan Evaluator (Opsional):</label>
                 <textarea
                   rows={2}
                   value={reviewComment}
                   onChange={(e) => setReviewComment(e.target.value)}
                   placeholder="Catatan kekuatan metodologi, arsitektur, atau saran pengembangan..."
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-bold text-xs shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-orange-400 transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs shadow-xs hover:from-amber-400 hover:to-orange-400 transition-all cursor-pointer flex items-center justify-center gap-2"
               >
                 <Award className="w-4 h-4" />
                 <span>Kirimkan Skor Peer-Review</span>
@@ -680,12 +680,12 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-slate-800/80 bg-slate-900/50 py-4 px-4 sm:px-6 lg:px-8 text-xs text-slate-400">
+      <footer className="mt-auto border-t border-slate-800/80 bg-slate-900/50 py-4 px-4 sm:px-6 lg:px-8 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <span>© 2026 SteamArena</span>
             <span>•</span>
-            <span>Ecosystem of <a href="https://steamcraft.online" className="text-amber-400 hover:underline">STEAM-Craft</a></span>
+            <span>Ecosystem of <a href="https://steamcraft.online" className="text-amber-600 hover:underline">STEAM-Craft</a></span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -695,7 +695,7 @@ export default function App() {
                 href="https://portofolionaza.steamcraft.online"
                 target="_blank"
                 rel="noreferrer"
-                className="text-slate-200 font-semibold hover:text-amber-400 transition-colors"
+                className="text-slate-200 font-semibold hover:text-amber-600 transition-colors"
               >
                 Muhammad Naza Firmansyah
               </a>
@@ -704,7 +704,7 @@ export default function App() {
               href="https://github.com/nazaa-arch/steam-arena"
               target="_blank"
               rel="noreferrer"
-              className="text-amber-400 hover:underline flex items-center gap-1"
+              className="text-amber-600 hover:underline flex items-center gap-1"
             >
               <span>GitHub Repository</span>
               <ChevronRight className="w-3 h-3" />
